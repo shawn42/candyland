@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="70" tileheight="70">
+ <tileset firstgid="1" name="candy_sheet" tilewidth="70" tileheight="70">
+  <image source="candy_sheet.png" width="980" height="490"/>
+ </tileset>
+ <layer name="bg" width="100" height="100">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3BMQEAAADCoPVP7WULoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBt5RKnmQJwAAA==
+  </data>
+ </layer>
+ <layer name="terrain" width="100" height="100">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3OMQ0AMAgAQaRUAAP+1VEB7KTNXfL7RwC8I29nqJZ+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPhPA0GnZ3hAnAAA
+  </data>
+ </layer>
+ <objectgroup name="actors" width="100" height="100">
+  <object name="shaylen" type="shaylen" x="155" y="145" width="63" height="63"/>
+  <object name="ethan" type="ethan" x="288" y="145" width="63" height="63"/>
+ </objectgroup>
+ <layer name="fg" width="100" height="100">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3BMQEAAADCoPVP7WULoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBt5RKnmQJwAAA==
+  </data>
+ </layer>
+</map>
