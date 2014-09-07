@@ -2,7 +2,9 @@ define_behavior :jump do
 
   requires :director
   setup do
-    actor.has_attributes jump_height: 36, jump_vel: 0, gravity: 3
+    actor.has_attributes gravity: 1.5,
+      jump_height: 10, 
+      jump_vel: 0
     actor.controller.when :jump, &method(:jump)
     director.when :update, &method(:update)
   end
@@ -31,7 +33,7 @@ define_behavior :jump do
       y_delta = -jump_amount
       y_delta += actor.gravity*dt_ms*0.1
 
-      actor.jump_vel -= dt_ms*0.2
+      actor.jump_vel -= dt_ms*0.1
 
       if actor.jump_vel < 0.5
         actor.jump_vel = 0 

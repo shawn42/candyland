@@ -2,7 +2,7 @@ define_behavior :platformer do
   requires :director
 
   setup do
-    actor.has_attributes speed: 300
+    actor.has_attributes speed: 100
     director.when :update, &method(:update)
   end
 

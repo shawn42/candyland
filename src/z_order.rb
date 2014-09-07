@@ -3,6 +3,7 @@ module ZOrder
   Collectible,
   BackgroundEffects,
   Player,
+  MapForeground,
   Hud,
   Debug,
   Console = *(0..100)

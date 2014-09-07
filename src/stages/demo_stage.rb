@@ -16,11 +16,11 @@ define_stage :demo do
       @ethan = @level.named_objects[:ethan]
     end
 
-    # def draw(target)
-    #   target.scale 2, 2 do
-    #     super target
-    #   end
-    # end
+    def draw(target)
+      target.scale 2, 2 do
+        super target
+      end
+    end
 
     def map_controls
       ethan_controls = {
