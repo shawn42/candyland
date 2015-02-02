@@ -23,20 +23,25 @@ define_stage :demo do
     end
 
     def map_controls
-      ethan_controls = {
-       '+w' => :jump,
-       's' => :duck,
-       'a'  => :move_left,
-       'd'  => :move_right,
-      }
-      shaylen_controls = {
-       '+i' => :jump,
-       'k' => :duck,
-       'j'  => :move_left,
-       'l'  => :move_right,
-      }
-      @ethan.controller.map_controls ethan_controls
-      @shaylen.controller.map_controls shaylen_controls
+      # ethan_controls = {
+      #  '+w' => :jump,
+      #  's' => :duck,
+      #  'a'  => :move_left,
+      #  'd'  => :move_right,
+      # }
+      # shaylen_controls = {
+      #  '+i' => :jump,
+      #  'k' => :duck,
+      #  'j'  => :move_left,
+      #  'l'  => :move_right,
+      # }
+      @ethan.controller.map_controls controls[:ethan]
+      @shaylen.controller.map_controls controls[:shaylen]
+      # viewport.follow @ethan
+    end
+
+    def controls
+      config_manager[:controls]
     end
   end
 end

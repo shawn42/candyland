@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="20" height="20" tilewidth="21" tileheight="21">
+<map version="1.0" orientation="orthogonal" width="40" height="40" tilewidth="21" tileheight="21">
  <tileset firstgid="1" name="platformer_stripped" tilewidth="21" tileheight="21">
   <image source="../graphics/platformer_stripped.png" width="630" height="630"/>
  </tileset>
- <layer name="bg" width="20" height="20">
+ <layer name="bg" width="40" height="40">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBSMglEwCkgHADV9EcVABgAA
+   H4sIAAAAAAAAA+3TQREAAAQAQaOA/m3FYNhNcJ+LAACuqJwugL38AQAA8EsDFdbg8QAZAAA=
   </data>
  </layer>
- <layer name="terrain" width="20" height="20">
+ <layer name="terrain" width="40" height="40">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBTQC3xhZGD4RAUswDTQPhkFo4CBAQBaKTB3QAYAAA==
+   H4sIAAAAAAAAA+3R3Q2AIAxGUWABR9FJ3H8OXUAfJBpsTEN/TMp3kr6ghCumBKBjKn8XfOvp8/ymkfuW8721vNfma9pn3n0atPuoO5OIen9bvqd6rnHHqs9iqJ6o/9cL+mSs+/bMn/q+Z5/UyH3U/7M6i7NHo4d7lvaeXuiTidrnOQAAAABSB9WbabEAGQAA
   </data>
  </layer>
- <objectgroup name="actors" width="20" height="20">
+ <objectgroup name="actors" width="40" height="40" visible="0">
   <object name="ethan" type="ethan" x="77" y="172"/>
-  <object name="shaylen" type="shaylen" x="243" y="184"/>
+  <object type="snail" x="353" y="222"/>
+  <object name="shaylen" type="shaylen" x="241" y="184"/>
  </objectgroup>
- <layer name="fg" width="20" height="20">
+ <layer name="fg" width="40" height="40">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAWjYBQUM+GW24BHDheYiEOPOBPleBSMgsECAMB7smtABgAA
+   H4sIAAAAAAAAA+3WuwmAMBSF4cQNrGzcyTEcwM4t3MQRnMQ9bESCt1DREO7JA+F8cBECMT+x0RiiOOqqdIFfyr5O5rnmLIHn5r6/XZ5rob63O0No+2I2+OT8voOcNdrwPdq+WbFvUuzR9DXVfb7WfbPZc676SH2psA/DPgz7MOzDsA/DPsyf+lr5t0nZ594dY4iIiIhQB39SgBMAGQAA
   </data>
  </layer>
 </map>

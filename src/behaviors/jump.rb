@@ -1,9 +1,17 @@
+class Rect
+  def each_point
+    yield vec2(self[0], self[2])
+    yield vec2(right, self[2])
+    yield vec2(right, bottom)
+    yield vec2(self[0], bottom)
+  end
+end
 define_behavior :jump do
 
-  requires :director
+  requires :director, :map_inspector
   setup do
-    actor.has_attributes gravity: 1.5,
-      jump_height: 10, 
+    actor.has_attributes gravity: 1.7,
+      jump_height: 12, 
       jump_vel: 0
     actor.controller.when :jump, &method(:jump)
     director.when :update, &method(:update)
@@ -17,14 +25,28 @@ define_behavior :jump do
     include MinMaxHelpers
 
     def jump(_)
-      actor.jump_vel = actor.jump_height
-      actor.action = :jump
-      actor.react_to :play_sound, [:jump1,:jump2].sample
+      unless actor.action == :jump || actor.action == :fall
+        actor.jump_vel = actor.jump_height
+        actor.action = :jump
+        actor.react_to :play_sound, [:jump1,:jump2].sample
+      end
     end
 
     def can_move?(dir)
-      # TODO map integration here
-      dir < 0 || actor.y <= 152
+      # BB behavior
+      return true if dir < 0
+      actor.has_attribute :bounding_box, nil
+      hh = (actor.height-4)/2
+      hw = (actor.width-16)/2
+      bb = Rect.new(0, 0, 2*hw, 2*hh)
+      bb.centerx = actor.x
+      bb.centery = actor.y
+      actor.bounding_box = bb
+
+      actor.bounding_box.each_point do |point|
+        return false if map_inspector.world_point_solid?(actor.map.map_data, point.x, point.y+dir)
+      end
+      true
     end
 
     def update(dt_ms,_)

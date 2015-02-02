@@ -5,3 +5,32 @@
 :screen_resolution: 
 - 1200
 - 800
+:controls:
+  :ethan:
+    +w: :jump
+    +a:
+    - :move_left
+    +d:
+    - :move_right
+    +s: :duck
+    +gp0_button_0: :jump
+    +gp0_up: :jump
+    +gp0_left:
+    - :move_left
+    +gp0_right:
+    - :move_right
+    +gp0_down: :duck
+  :shaylen:
+    +i: :jump
+    +j:
+    - :move_left
+    +l:
+    - :move_right
+    +k: :duck
+    +gp1_button_0: :jump
+    +gp1_up: :jump
+    +gp1_left:
+    - :move_left
+    +gp1_right:
+    - :move_right
+    +gp1_down: :duck
